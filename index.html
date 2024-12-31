@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>School Management System</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+        <a href="#" onclick="showPage('students')">Students</a>
+        <a href="#" onclick="showPage('teachers')">Teachers</a>
+        <a href="#" onclick="showPage('classes')">Classes</a>
+    </nav>
+
+    <div id="mainContent" class="container">
+        <section id="dashboard" class="card selection-h">
+            <h1>Welcome to the School Management System</h1>
+            <p>This system provides a robust platform to efficiently manage students, teachers, and classes. It streamlines administrative tasks, enhances communication, and improves the overall experience for everyone involved in an educational institution.</p>
+            <div class="dashboard-buttons">
+                <button class="btn" onclick="openHelp()">Help & Support</button>
+                <button class="btn" onclick="contactAdmin()">Contact Admin</button>
+            </div>
+        </section>
+        <!-- Help & Support Page -->
+<section id="helpSupport" class="card hidden selection-h">
+    <h3>Help & Support</h3>
+    <p>If you need assistance, please refer to the following resources:</p>
+    <ul>
+        <li><strong>FAQs:</strong> Visit our <a href="#">FAQ page</a> for common questions and answers.</li>
+        <li><strong>Documentation:</strong> Access our <a href="#">user guide</a> for detailed instructions.</li>
+        <li><strong>Live Chat:</strong> Click <a href="#">here</a> to chat with a support representative.</li>
+    </ul>
+    <button class="btn" onclick="showPage('dashboard')">Back to Dashboard</button>
+</section>
+
+<!-- Contact Admin Page -->
+<section id="contactAdmin" class="card hidden selection-h">
+    <h3>Contact Admin</h3>
+    <p>For administrative inquiries, please fill out the form below:</p>
+    <div class="form-group">
+        <label for="contactName">Your Name:</label>
+        <input type="text" id="contactName" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label for="contactEmail">Your Email:</label>
+        <input type="email" id="contactEmail" placeholder="Enter your email">
+    </div>
+    <div class="form-group">
+        <label for="contactMessage">Message:</label>
+        <textarea id="contactMessage" placeholder="Enter your message"></textarea>
+    </div>
+    <button class="btn" onclick="submitContactForm()">Submit</button>
+    <button class="btn" onclick="showPage('dashboard')">Back to Dashboard</button>
+</section>
+
+        <section id="students" class="card hidden selection-h" >
+            <h3>Student Management</h3>
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" placeholder="Enter student name">
+            </div>
+            <div class="form-group">
+                <label for="studentClass">Class:</label>
+                <select id="studentClass">
+                    <option value="">Select Class</option>
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                </select>
+            </div>
+            <button class="btn" onclick="addStudent()">Add Student</button>
+            <ul id="studentList"></ul>
+        </section>
+
+        <section id="teachers" class="card hidden selection-h" >
+            <h3>Teacher Management</h3>
+            <div class="form-group">
+                <label for="teacherName">Teacher Name:</label>
+                <input type="text" id="teacherName" placeholder="Enter teacher name">
+            </div>
+            <div class="form-group">
+                <label for="teacherSubject">Subject:</label>
+                <input type="text" id="teacherSubject" placeholder="Enter subject">
+            </div>
+            <button class="btn" onclick="addTeacher()">Add Teacher</button>
+            <ul id="teacherList"></ul>
+        </section>
+
+        <section id="classes" class="card hidden selection-h">
+            <h3>Class Management</h3>
+            <div class="form-group">
+                <label for="className">Class Name:</label>
+                <input type="text" id="className" placeholder="Enter class name">
+            </div>
+            <div class="form-group">
+                <label for="classCapacity">Capacity:</label>
+                <input type="number" id="classCapacity" placeholder="Enter capacity">
+            </div>
+            <button class="btn" onclick="addClass()">Add Class</button>
+            <ul id="classList"></ul>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-columns">
+            <div class="column">
+                <h4>About Us</h4>
+                <p>We provide a robust platform to efficiently manage students, teachers, and classes.</p>
+            </div>
+            <div class="column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" onclick="showPage('dashboard')">Dashboard</a></li>
+                    <li><a href="#" onclick="showPage('students')">Students</a></li>
+                    <li><a href="#" onclick="showPage('teachers')">Teachers</a></li>
+                    <li><a href="#" onclick="showPage('classes')">Classes</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:info@schoolmanagement.com">info@schoolmanagement.com</a></p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="scritp.js"></script>
+</html>
